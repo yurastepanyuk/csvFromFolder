@@ -48,7 +48,6 @@ public class CsvService {
         String listFiles[] = csvFolder.list(filter);
 
         for (String curFile: listFiles) {
-            System.out.println(curFile);
 
             File csvFile = new File(folder, curFile) ;
 
