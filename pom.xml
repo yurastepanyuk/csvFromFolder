@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>angular2-spring-boot-demo1</name>
+	<name>csv-view</name>
 	<description>Show csv from folder</description>
 
 	<parent>
@@ -64,6 +64,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
 			</plugin>
 		</plugins>
 		<defaultGoal>spring-boot:run</defaultGoal>
