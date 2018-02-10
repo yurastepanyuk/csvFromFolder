@@ -15,15 +15,4 @@ public class CsvViewApplicationTests {
 	public void contextLoads() {
 	}
 
-	@Test
-	public void uuidTest(){
-
-		for (int i = 0; i < 3; i++) {
-			UUID uuid = UUID.randomUUID();
-			String strUiid = uuid.toString();
-			System.out.println(strUiid);
-		}
-
-	}
-
 }
