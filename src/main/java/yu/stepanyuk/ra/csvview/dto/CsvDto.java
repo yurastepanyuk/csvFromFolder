@@ -10,4 +10,6 @@ public class CsvDto {
     Integer columns;
     Integer rows;
     Integer emptys;
+    String separator;
+    ColumnDto[] columnsData;
 }
