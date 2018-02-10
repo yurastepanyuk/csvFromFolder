@@ -1,0 +1,18 @@
+<!--<h2>Get CSV data from folder</h2>-->
+<!--<button type="button" (click)="makeRequest()" class="btn btn-primary">Make Request</button>-->
+<form>
+  <h3>Get CSV data from folder</h3>
+
+  <div class="field">
+    <label for="foldername">Folder name:</label>
+    <input id="foldername" name="foldername" #fromfolder>
+  </div>
+   <button type="button" class="btn btn-primary" (click)="makeRequestTwo(fromfolder.value)">
+    Get
+  </button>
+
+</form>
+
+<div *ngIf="loading">loading...</div>
+<pre>{{data | json}}</pre>
+

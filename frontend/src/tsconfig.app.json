@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "module": "es2015",
+    "lib": ["es2017", "dom"],
+    "moduleResolution": "node", // <-----
+    "baseUrl": "",
+    "typeRoots": [
+      "../../node_modules/@types/"
+    ],
+    "types" : [
+      "core-js"
+    ],
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts",
+    "node_modules"
+  ]
+}
