@@ -6,7 +6,7 @@
 	<groupId>yu.stepanyuk.ra</groupId>
 	<artifactId>csv-view</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<name>csv-view</name>
 	<description>Show csv from folder</description>
