@@ -2,4 +2,4 @@
 2) Start command line, change folder to this project folder;
 3) Start it by command: java -jar csv-view-0.0.1-SNAPSHOT.jar
 4) Create some folder near project and put any csv files;
-5) Use frontend :) 
+5) Use frontend :) (http://localhost:8080)
