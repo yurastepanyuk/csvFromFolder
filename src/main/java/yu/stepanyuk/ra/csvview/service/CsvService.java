@@ -35,7 +35,7 @@ public class CsvService {
         floatValidation = Pattern.compile(FLOAT_REGEX);
     }
 
-    public List<CsvDto> getDataOfCsv(@NonNull String folder) {
+    public List<CsvDto> getDataOfCsv(@NonNull String folder) throws IOException {
 
         List<CsvDto> data = new ArrayList<>();
 
@@ -56,12 +56,8 @@ public class CsvService {
             CsvSchema schema = mapper.schemaFor(String[].class).withColumnSeparator(separator.charAt(0));
 
             MappingIterator<String[]> it = null;
-            try {
-                it = mapper.readerFor(String[].class).with(schema).readValues(csvFile);
 
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            it = mapper.readerFor(String[].class).with(schema).readValues(csvFile);
 
             Map<Integer, ColumnDto> columnsData = new HashMap<>();
 
