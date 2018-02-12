@@ -13,6 +13,48 @@
 
 </form>
 
-<div *ngIf="loading">loading...</div>
-<pre>{{data | json}}</pre>
+<div *ngIf="errorObj">
+  <h3>{{errorObj.message}}</h3>
+</div>
+
+<div *ngIf="!this.errorObj">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>name</th>
+      <th>columns</th>
+      <th>rows</th>
+      <th>emptys</th>
+      <th>separator</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <div *ngIf="loading">loading...</div>
+
+    <tr *ngFor="let curDataCsv of dataList">
+      <td class="message"> {{curDataCsv.name}}</td>
+      <td class="message"> {{curDataCsv.columns}}</td>
+      <td class="message"> {{curDataCsv.rows}}</td>
+      <td class="message"> {{curDataCsv.emptys}}</td>
+      <td class="message"> {{curDataCsv.separator}}</td>
+
+      <ul class="list-group">
+        <div *ngFor="let curColumv of curDataCsv.columnsData">
+          <li class="list-group-item">
+            <h4 class="list-group-item-heading">columnName: {{curColumv.columnName}}</h4>
+            <p class="list-group-item-text">type: {{curColumv.type}}</p>
+            <p class="list-group-item-text">epmties: {{curColumv.epmties}}</p>
+          </li>
+        </div>
+      </ul>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
+
+<!--<pre>{{data | json}}</pre>-->
 
